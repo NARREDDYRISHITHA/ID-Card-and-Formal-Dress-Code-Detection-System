@@ -30,7 +30,7 @@ This project is a computer vision-based compliance monitoring system that detect
 
 ![image alt](https://github.com/NARREDDYRISHITHA/ID-Card-and-Formal-Dress-Code-Detection-System/blob/7068f759ac6be2f2eefdcf6215c8a6106124cf0d/22S02-19Poster.png)
 
-**Fig.4 Formal Dress Code Compliance Monitoring Flow**
+   **Fig.4 Formal Dress Code Compliance Monitoring Flow**
 
 1. Live video feed is analyzed in real-time.
 2. ID card is detected using YOLOv8
