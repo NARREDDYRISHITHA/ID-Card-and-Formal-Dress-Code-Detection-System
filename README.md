@@ -4,7 +4,7 @@ This project is a computer vision-based compliance monitoring system that detect
 
 ## 🚀 Features
 
-- 🎯 **Real-Time ID Card Detection** using YOLOv12 (trained custom model)
+- 🎯 **Real-Time ID Card Detection** using YOLOv8 (trained custom model)
 - 👔 **Formal Dress Code Verification** using Google Cloud Vision API
 - 📸 **Violation Monitoring & Evidence Capture**
 - 📧 **Automated Email Alerts** with zipped violation images
@@ -20,7 +20,6 @@ This project is a computer vision-based compliance monitoring system that detect
 │   ├── No_ID_Card/
 │   └── No_Formal_Dress/
 ├── yolo/                      # Trained YOLO weights (best.pt)
-├── foam-ease-site/           # React Web Application
 ├── main.py                   # Main app - integrates detection and processing
 ├── dress.py                  # Handles dress detection (Google Vision API)
 ├── send.py                   # Handles email alerts
@@ -34,7 +33,7 @@ This project is a computer vision-based compliance monitoring system that detect
 **Fig.4 Formal Dress Code Compliance Monitoring Flow**
 
 1. Live video feed is analyzed in real-time.
-2. ID card is detected using YOLOv12.
+2. ID card is detected using YOLOv8
 3. Dress type is detected via Google Vision API.
 4. If any violation (No ID / No Formal Dress) is found:
    - Captures the image
@@ -62,7 +61,7 @@ This project is a computer vision-based compliance monitoring system that detect
 
 - Python 3.8+
 - OpenCV
-- YOLOv12 with Ultralytics
+- YOLOv8 with Ultralytics
 - Google Cloud Vision API (Credentials required)
 - Flask
 - smtplib (for email)
