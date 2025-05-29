@@ -1,0 +1,118 @@
+# ID Card and Formal Dress Code Detection System
+
+This project is a computer vision-based compliance monitoring system that detects ID card usage and verifies formal dress code adherence using a combination of YOLOv12 object detection and the Google Cloud Vision API. The system is integrated with automated email alerts and real-time violation logging for efficient monitoring.
+
+## 🚀 Features
+
+- 🎯 **Real-Time ID Card Detection** using YOLOv12 (trained custom model)
+- 👔 **Formal Dress Code Verification** using Google Cloud Vision API
+- 📸 **Violation Monitoring & Evidence Capture**
+- 📧 **Automated Email Alerts** with zipped violation images
+- 🌐 **React-Based Web Interface** for monitoring & visualization
+
+---
+
+## 📁 Project Structure
+
+```
+├── Id-card-1/                 # YOLO training dataset (train, test, valid)
+├── Violations/                # Saved images of detected violations
+│   ├── No_ID_Card/
+│   └── No_Formal_Dress/
+├── yolo/                      # Trained YOLO weights (best.pt)
+├── foam-ease-site/           # React Web Application
+├── main.py                   # Main app - integrates detection and processing
+├── dress.py                  # Handles dress detection (Google Vision API)
+├── send.py                   # Handles email alerts
+└── README.md                 # Project Documentation
+```
+
+---
+
+
+
+**Fig.4 Formal Dress Code Compliance Monitoring Flow**
+
+1. Live video feed is analyzed in real-time.
+2. ID card is detected using YOLOv12.
+3. Dress type is detected via Google Vision API.
+4. If any violation (No ID / No Formal Dress) is found:
+   - Captures the image
+   - Saves to the appropriate folder
+   - Sends an automated alert email with a .zip attachment
+
+---
+
+
+
+
+**Fig.2 Formal and ID Card Detection**
+
+- ✅ Detected ID Card and Formal Dress
+- ❌ No ID Card but Formal Dress
+
+
+
+![43efb79e-a942-400c-af18-696db55df643](https://github.com/user-attachments/assets/1d87efa8-6f31-49c6-8329-b0b6fe228983)
+**Fig.3 Email Alert with Zipped Violations**
+
+---
+
+## 📦 Requirements
+
+- Python 3.8+
+- OpenCV
+- YOLOv12 with Ultralytics
+- Google Cloud Vision API (Credentials required)
+- Flask
+- smtplib (for email)
+
+---
+
+## ⚙️ Setup Instructions
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/formal-id-detection.git
+cd formal-id-detection
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Add your Google Vision API credentials in dress.py
+
+# Run the main script
+python main.py
+```
+
+---
+
+## 📫 Email Alert System
+- Sends violation reports to the specified email ID.
+- Emails include a `.zip` file containing images of non-compliant individuals.
+- Example:
+- 
+![46c649b6-9841-42ac-8b0c-7d2f7e41146c](https://github.com/user-attachments/assets/729adcff-a75c-4073-bbcc-e7a5737f8fb6)
+
+
+---
+
+## 🛠️ Customization
+- Change dress code logic in `dress.py`
+- Update email list and SMTP settings in `send.py`
+- Modify object detection threshold in `main.py`
+
+---
+
+## 📸 Model Training
+- The YOLOv12 model was trained using custom dataset in `Id-card-1/`
+- Use [Roboflow](https://roboflow.com/) or manual labeling tools for annotation
+- Trained using `ultralytics` package:
+
+```bash
+yolo task=detect mode=train model=yolov12.yaml data=data.yaml epochs=100 imgsz=640
+```
+
+
+
+
