@@ -28,7 +28,8 @@ This project is a computer vision-based compliance monitoring system that detect
 
 ---
 
-![image alt](https://github.com/NARREDDYRISHITHA/ID-Card-and-Formal-Dress-Code-Detection-System/blob/7068f759ac6be2f2eefdcf6215c8a6106124cf0d/22S02-19Poster.png)
+<img src="https://github.com/NARREDDYRISHITHA/ID-Card-and-Formal-Dress-Code-Detection-System/blob/7068f759ac6be2f2eefdcf6215c8a6106124cf0d/22S02-19Poster.png?raw=true" alt="Poster" width="400"/>
+
 
    **Fig.4 Formal Dress Code Compliance Monitoring Flow**
 
@@ -67,20 +68,20 @@ This project is a computer vision-based compliance monitoring system that detect
 - smtplib (for email)
 
 ---
+# ⚙️ Setup Instructions
 
-## ⚙️ Setup Instructions
-
-```bash
-# Clone the repository
+## Clone the repository
+```
 git clone https://github.com/yourusername/formal-id-detection.git
 cd formal-id-detection
-
-# Install dependencies
+```
+## Install dependencies
+```
 pip install -r requirements.txt
-
-# Add your Google Vision API credentials in dress.py
-
-# Run the main script
+-Add your Google Vision API credentials in dress.py
+```
+## Run the main script
+```
 python main.py
 ```
 
@@ -90,9 +91,8 @@ python main.py
 - Sends violation reports to the specified email ID.
 - Emails include a `.zip` file containing images of non-compliant individuals.
 - Example:
-- 
-![46c649b6-9841-42ac-8b0c-7d2f7e41146c](https://github.com/user-attachments/assets/729adcff-a75c-4073-bbcc-e7a5737f8fb6)
 
+<img src="https://github.com/user-attachments/assets/729adcff-a75c-4073-bbcc-e7a5737f8fb6" alt="Reduced Height Image" height="400"/>
 
 ---
 
