@@ -1,6 +1,6 @@
 # ID Card and Formal Dress Code Detection System
 
-This project is a computer vision-based compliance monitoring system that detects ID card usage and verifies formal dress code adherence using a combination of YOLOv12 object detection and the Google Cloud Vision API. The system is integrated with automated email alerts and real-time violation logging for efficient monitoring.
+This project is a computer vision-based compliance monitoring system that detects ID card usage and verifies formal dress code adherence using a combination of YOLOv8 object detection and the Google Cloud Vision API. The system is integrated with automated email alerts and real-time violation logging for efficient monitoring.
 
 ## 🚀 Features
 
